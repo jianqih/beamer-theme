@@ -10,7 +10,7 @@
 
 \usepackage{array}
 
-
+\usepackage{natbib}
 \usepackage{tikz}
 \usepackage{verbatim}
 \setbeamertemplate{note page}{\pagecolor{pink!5}\insertnote}
@@ -206,6 +206,14 @@
 \end{transitionframe}
 
 
+
+\begin{frame}{Math}
+    Use the \texttt{equation} environment to make your math look nice and centered. For example, the utility function of a representative agent is given by:
+    \begin{equation}
+        U_t = \frac{c^{1-\sigma }}{1-\sigma}
+    \end{equation}
+    where $\sigma $ is the CRRA coefficient and $c$ is consumption.
+\end{frame}
 
 \begin{frame}{Aim for simplicity}
 \begin{center}
@@ -617,6 +625,23 @@ Information goes here
   \end{wideitemize}
 \end{frame}
 
+\begin{frame}{Add referfences and bibliography}
+  \begin{wideitemize}
+    \item Use the \texttt{\textbackslash bibliography\{refs\}} command to add your bibliography
+    \item Use the \texttt{\textbackslash bibliographystyle\{econ-econometrica\}} command to set the style
+    \item You can use any .bib file, but I like to keep mine in the same folder as my slides
+  \end{wideitemize}
+  \vspace*{1em}
+
+  For example, \citet{acemoglu2024} study the impact of AI on labor markets and find that while AI has the potential to increase productivity, it also poses significant challenges for workers, particularly those in routine jobs. They suggest that policy interventions may be necessary to mitigate the negative effects of AI on employment and income inequality.
+\end{frame}
+
+
+\begin{frame}{References}
+\bibliography{refs.bib}
+\bibliographystyle{econ-econometrica}
+    
+\end{frame}
 \appendix
 
 \begin{frame}[label=appendix_start]{Almost done!}
